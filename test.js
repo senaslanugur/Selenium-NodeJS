@@ -20,6 +20,12 @@ function logTestResult(testName, isPassed) {
   }
 }
 
+
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds));
+};
+
+
 async function run() {
   const driver = await new Builder()
     .forBrowser('chrome')
@@ -40,6 +46,12 @@ async function run() {
 
     await driver.findElement(By.id('shopping_cart_container')).click();
     logTestResult('View Shopping Cart', true);
+
+    // Add a new test step: Log out
+    await driver.findElement(By.className('bm-burger-button')).click();
+    await sleep(3000);
+    await driver.findElement(By.id('logout_sidebar_link')).click();
+    logTestResult('Log Out', true);
 
     const screenshot = await driver.takeScreenshot();
     fs.writeFileSync('screenshot.png', screenshot, 'base64');
