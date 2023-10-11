@@ -44,6 +44,7 @@ async function run() {
     const screenshot = await driver.takeScreenshot();
     fs.writeFileSync('screenshot.png', screenshot, 'base64');
     logTestResult('Take Screenshot', true);
+
   } catch (error) {
     logTestResult('Exception', false);
     console.error(error);
