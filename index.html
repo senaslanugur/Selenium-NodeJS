@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test Results</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Status</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="testResultsTableBody">
+                <!-- Test results will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch and parse the JSON file
+        fetch('testResults.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('testResultsTableBody');
+                data.forEach(result => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${result.testName}</td>
+                        <td>${result.isPassed ? 'Passed' : 'Failed'}</td>
+                        <td>${result.timestamp}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Failed to fetch and parse test results:', error);
+            });
+    </script>
+</body>
+</html>

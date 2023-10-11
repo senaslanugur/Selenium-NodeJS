@@ -1,0 +1,27 @@
+[
+  {
+    "testName": "Open URL",
+    "isPassed": true,
+    "timestamp": "11/10/2023, 16:40:25"
+  },
+  {
+    "testName": "Login",
+    "isPassed": true,
+    "timestamp": "11/10/2023, 16:40:25"
+  },
+  {
+    "testName": "Add to Cart",
+    "isPassed": true,
+    "timestamp": "11/10/2023, 16:40:25"
+  },
+  {
+    "testName": "View Shopping Cart",
+    "isPassed": true,
+    "timestamp": "11/10/2023, 16:40:25"
+  },
+  {
+    "testName": "Take Screenshot",
+    "isPassed": true,
+    "timestamp": "11/10/2023, 16:40:25"
+  }
+]
