@@ -1,5 +1,5 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
-const edge = require('selenium-webdriver/edge');
+const ie = require('selenium-webdriver/ie');
 
 const fs = require('fs');
 const logger = require("./common/logger.js");
