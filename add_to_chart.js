@@ -1,7 +1,6 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs');
-const inquirer = require('inquirer');
 const logger = require("./logger.js");
 const common = require("./common.js");
 const driver = require("./setup.js");
@@ -28,6 +27,8 @@ async function run() {
     //screenshot
     fs.writeFileSync('screenshot.png', screenshot, 'base64');
     logger.logTestResult('Take Screenshot', true);
+    
+   
 
   } catch (error) {
     logger.logTestResult('Exception', false);
@@ -40,4 +41,4 @@ async function run() {
   fs.writeFileSync('testResults.json', JSON.stringify(logger.testResults, null, 2));
 }
 
-for (var i = 0; i < 1; i++) run();
+run();
