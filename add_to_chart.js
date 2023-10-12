@@ -1,9 +1,9 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs');
-const logger = require("./logger.js");
-const common = require("./common.js");
-const driver = require("./setup.js");
+const logger = require("./common/logger.js");
+const common = require("./common/common.js");
+const driver = require("./common/setup.js");
 
 async function run() {
 
