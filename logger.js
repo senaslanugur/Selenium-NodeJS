@@ -1,5 +1,5 @@
 const fs = require('fs');
-// Initialize an empty JSON array to store test results
+
 let testResults = [];
 
 function logTestResult(testName, isPassed) {
