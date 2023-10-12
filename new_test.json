@@ -1,0 +1,17 @@
+[
+  {
+    "testName": "Open URL",
+    "isPassed": true,
+    "timestamp": "12/10/2023, 13:10:29"
+  },
+  {
+    "testName": "Login",
+    "isPassed": true,
+    "timestamp": "12/10/2023, 13:10:29"
+  },
+  {
+    "testName": "Take Screenshot",
+    "isPassed": true,
+    "timestamp": "12/10/2023, 13:10:29"
+  }
+]

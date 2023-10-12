@@ -11,17 +11,9 @@ async function run() {
     // step-1 and step-2
     await common.login(driver.driver);
 
-
-    //step-3
-    await driver.driver.findElement(By.className('btn_primary')).click();
-    logger.logTestResult('Add to Cart', true);
-
-    //step-4
-    await driver.driver.findElement(By.id('shopping_cart_container')).click();
-    logger.logTestResult('View Shopping Cart', true);
-
-    //step-5
-    await common.logout(driver.driver); // Call the logout function
+    
+    await driver.driver.findElement(By.css("*[data-test=\"add-to-cart-test.allthethings()-t-shirt-(red)\"]")).click()
+    await driver.driver.findElement(By.css("*[data-test=\"add-to-cart-sauce-labs-onesie\"]")).click()
     
 
     //screenshot
@@ -39,7 +31,7 @@ async function run() {
   }
 
   // Write the test results to a JSON file
-  fs.writeFileSync('testResults.json', JSON.stringify(logger.testResults, null, 2));
+  fs.writeFileSync('new_test.json', JSON.stringify(logger.testResults, null, 2));
 }
 
 run();
