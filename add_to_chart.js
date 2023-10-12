@@ -1,5 +1,6 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
+const edge = require('selenium-webdriver/edge');
+
 const fs = require('fs');
 const logger = require("./common/logger.js");
 const common = require("./common/common.js");
