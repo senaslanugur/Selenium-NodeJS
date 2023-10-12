@@ -1,26 +1,31 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs');
-const logger = require("./logger.js")
-const common = require("./common.js")
-const driver = require("./setup.js")
+const inquirer = require('inquirer');
+const logger = require("./logger.js");
+const common = require("./common.js");
+const driver = require("./setup.js");
 
 async function run() {
 
   try {
-    await common.login(driver.driver); // Call the login function
+    // step-1 and step-2
+    await common.login(driver.driver);
 
 
+    //step-3
     await driver.driver.findElement(By.className('btn_primary')).click();
     logger.logTestResult('Add to Cart', true);
 
-    
+    //step-4
     await driver.driver.findElement(By.id('shopping_cart_container')).click();
     logger.logTestResult('View Shopping Cart', true);
 
-
+    //step-5
     await common.logout(driver.driver); // Call the logout function
     const screenshot = await driver.driver.takeScreenshot();
+
+    //screenshot
     fs.writeFileSync('screenshot.png', screenshot, 'base64');
     logger.logTestResult('Take Screenshot', true);
 
@@ -35,4 +40,4 @@ async function run() {
   fs.writeFileSync('testResults.json', JSON.stringify(logger.testResults, null, 2));
 }
 
-run();
+for (var i = 0; i < 1; i++) run();

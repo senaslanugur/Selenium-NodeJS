@@ -5,6 +5,7 @@ const logger = require("./logger.js")
 
 
 async function login(driver) {
+  
   await driver.get('https://www.saucedemo.com/');
   logger.logTestResult('Open URL', true);
 
