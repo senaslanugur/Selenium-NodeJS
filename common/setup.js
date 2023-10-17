@@ -1,16 +1,16 @@
-// This is for Chrome
+//This is for Chrome
 
-// const { Builder, By, Key, until } = require('selenium-webdriver');
-// const chrome = require('selenium-webdriver/chrome');
+const { Builder, By, Key, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 
-// const driver = new Builder()
-// .forBrowser('chrome')
-// .setChromeOptions(new chrome.Options().headless()) // Optional, for headless mode
-// .build();
+const driver = new Builder()
+.forBrowser('chrome')
+.setChromeOptions(new chrome.Options().headless()) // Optional, for headless mode
+.build();
 
 
 
-// module.exports = {driver}
+module.exports = {driver}
 
 
 //  This is for Microft Edge
@@ -26,12 +26,12 @@
 // module.exports = { driver }
 
 // this is for Explorer
-const { Builder, By, Key, until } = require('selenium-webdriver');
-const ie = require('selenium-webdriver/ie');
+// const { Builder, By, Key, until } = require('selenium-webdriver');
+// const ie = require('selenium-webdriver/ie');
 
-const driver = new Builder()
-  .forBrowser('internet explorer') // Use 'internet explorer' for IE
-//   .setIeOptions(new ie.Options().headless()) // Optional, for headless mode
-  .build();
+// const driver = new Builder()
+//   .forBrowser('internet explorer') // Use 'internet explorer' for IE
+// //   .setIeOptions(new ie.Options().headless()) // Optional, for headless mode
+//   .build();
 
-module.exports = { driver };
+// module.exports = { driver };
