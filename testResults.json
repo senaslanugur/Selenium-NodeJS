@@ -2,31 +2,31 @@
   {
     "testName": "Open URL",
     "isPassed": true,
-    "timestamp": "17/10/2023, 19:06:09"
+    "timestamp": "18/10/2023, 14:10:10"
   },
   {
     "testName": "Login",
     "isPassed": true,
-    "timestamp": "17/10/2023, 19:06:09"
+    "timestamp": "18/10/2023, 14:10:10"
   },
   {
     "testName": "Add to Cart",
     "isPassed": true,
-    "timestamp": "17/10/2023, 19:06:10"
+    "timestamp": "18/10/2023, 14:10:10"
   },
   {
     "testName": "View Shopping Cart",
     "isPassed": true,
-    "timestamp": "17/10/2023, 19:06:10"
+    "timestamp": "18/10/2023, 14:10:10"
   },
   {
     "testName": "Log Out",
     "isPassed": true,
-    "timestamp": "17/10/2023, 19:06:13"
+    "timestamp": "18/10/2023, 14:10:13"
   },
   {
     "testName": "Take Screenshot",
     "isPassed": true,
-    "timestamp": "17/10/2023, 19:06:13"
+    "timestamp": "18/10/2023, 14:10:13"
   }
 ]
